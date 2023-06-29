@@ -6,11 +6,11 @@ Diabetes type 1 is an autoimmune disease where beta cells of the pancreas are at
 In pharmaceutics, there are two main types of models. Pharmacokinetic models are used to predict the concentration of the drug over time. Pharmacodynamic models are used to predict the effect caused by the drug, in this case, the effect measured is glucose concentrations in the blood. By using models, scientists can better predict at which doses the drug is effective or toxic, thus saving money and unnecessary animal or clinical trials.
 
 ## The problem
-The problem I want to solve is how much insulin a diabetes type 1 patient should take after a meal. I will do this in four steps:
+My problem is modeling the glucose levels of a diabetes patient after a meal. I will do this in four steps:
 1.	A model of glucose level rises with meals.
 2.	A pharmacokinetic model, which models the concentration of insulin in blood against time. 
 3.	A pharmacodynamic model, which models the drug effect, in this case blood glucose level.
-4.	At the end, you can input how much sugar is in your meal and the program will return a recommended dose of insulin and a graph of predicted glucose and insulin concentrations.
+4.	At the end, you can input how much sugar is in your meal and the program will return a graph of predicted glucose and insulin concentrations.
 
 ## Data and assumptions
 The parameters of the pharmacokinetic and pharmacodynamic models (K<sub>a</sub>, K<sub>e</sub> and K<sub>eff</sub>) were calculated with data from an article in the journal _Diabetes, obesity and metabolism_ (https://doi.org/10.1111/j.1463-1326.2012.01580.x).  The other parameters (V<sub>d</sub> and glucose absorption rate) were estimated.
