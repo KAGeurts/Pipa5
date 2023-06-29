@@ -15,7 +15,7 @@ The problem I want to solve is how much insulin a diabetes type 1 patient should
 At the end, you can input how much sugar is in your meal and the program will return a recommended dose of insulin and a graph of predicted glucose and insulin concentrations.
 
 ## Data and assumptions
-The parameters of the pharmacokinetic and pharmacodynamic models were calculated with data from an article in the journal _Diabetes, obesity and metabolism_ (https://doi.org/10.1111/j.1463-1326.2012.01580.x).  The other parameters were estimated.
+The parameters of the pharmacokinetic and pharmacodynamic models (K<sub>a</sub>, K<sub>e</sub> and K<sub>eff</sub>) were calculated with data from an article in the journal _Diabetes, obesity and metabolism_ (https://doi.org/10.1111/j.1463-1326.2012.01580.x).  The other parameters were estimated.
 
 To simplify the model and fit within the scope of the project, the following assumptions were made:
 * Other factors effecting glucose concentrations, e.g. metabolism, were ignored.
