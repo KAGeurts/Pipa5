@@ -50,12 +50,13 @@ def add_insulin(dose, start_glu_conc):
 
 repeat = True
 while repeat:
-	sugar_input = float(input("How much sugar does your meal contain in grams?"))
-	#SUGAR INPUT NAAR G/L???
+	vd = 12 #Volume of distribution in liters
+	sugar_input = (float(input("How much sugar does your meal contain in grams?"))/vd) #Takes input in grams and calculates g/l
 	glu_up_data, abs_time = meal(sugar_input)
-	#DOSIS BEREKENEN
+	dosis = glu_up_data[-1]
+	print(f"Your dosis is {dosis*vd} grams of insulin.")
 
-	ins_data, glu_down_data, ins_time = add_insulin(0.5, glu_up_data[-1])
+	ins_data, glu_down_data, ins_time = add_insulin(dosis, glu_up_data[-1])
 
 	total_time = abs_time + ins_time
 	glu_data = glu_up_data + glu_down_data
@@ -66,7 +67,7 @@ while repeat:
 	plt.show()
 
 	again_input = input("Calculate again? (y/n)")
-	if x == "y":
+	if again_input == "y":
 		repeat = True
 	else:
 		repeat = False
