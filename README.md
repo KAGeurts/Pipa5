@@ -18,4 +18,4 @@ The parameters of the pharmacokinetic and pharmacodynamic models (K<sub>a</sub>,
 To simplify the model and fit within the scope of the project, the following assumptions were made:
 * Other factors effecting glucose concentrations, e.g. metabolism, were ignored.
 * The rate of glucose uptake was simplified to a linear formula
-* Baseline insulin and glucose concentrations were ignored.
+* Insulin was added after the glucose is absorbed 
