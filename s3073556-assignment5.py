@@ -54,15 +54,16 @@ while repeat:
 	sugar_input = (float(input("How much sugar does your meal contain in grams?"))/vd) #Takes input in grams and calculates g/l
 	glu_up_data, abs_time = meal(sugar_input)
 	dosis = glu_up_data[-1]
-	print(f"Your dosis is {dosis*vd} grams of insulin.")
 
 	ins_data, glu_down_data, ins_time = add_insulin(dosis, glu_up_data[-1])
 
 	total_time = abs_time + ins_time
 	glu_data = glu_up_data + glu_down_data
 
-	plt.plot(np.arange(abs_time, total_time, 1), ins_data, label="Insulin concentration in blood (g/l), change from baseline")
-	plt.plot(np.arange(0, total_time, 1), glu_data, label="Glucose concentration in blood (g/l), change from baseline")
+	plt.plot(np.arange(abs_time, total_time, 1), ins_data, label="Insulin")
+	plt.plot(np.arange(0, total_time, 1), glu_data, label="Glucose")
+	plt.xlabel("Time (h)")
+	plt.ylabel("Concentration in blood (g/l), change from baseline")
 	plt.legend()
 	plt.show()
 
